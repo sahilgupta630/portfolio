@@ -30,7 +30,7 @@ export default function Achievements() {
                         <div className="h-[1px] bg-slate-700 ml-6 flex-grow rounded" />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-[1fr]">
                         {achievements.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -39,9 +39,9 @@ export default function Achievements() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 whileHover={{ scale: 1.02 }}
-                                className="glass-card p-6 flex items-start gap-4 transition-transform hover:shadow-cyan-500/10 hover:shadow-lg"
+                                className="glass-card p-6 flex items-center h-full gap-4 transition-transform hover:shadow-cyan-500/10 hover:shadow-lg"
                             >
-                                <div className="mt-1 flex-shrink-0 p-2 bg-slate-800/80 rounded-full border border-slate-700">
+                                <div className="flex-shrink-0 p-2 bg-slate-800/80 rounded-full border border-slate-700">
                                     {item.icon}
                                 </div>
                                 <p className="text-slate-300 font-medium text-lg leading-relaxed">
