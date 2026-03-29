@@ -30,11 +30,6 @@ export default function Experience() {
         },
     ];
 
-    const leadership = [
-        { title: "Secretary", role: "Mekanika" },
-        { title: "Unit Leader", role: "NSS" },
-        { title: "Sub Head", role: "Shaurya" },
-    ];
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -66,64 +61,33 @@ export default function Experience() {
                     </div>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div className="max-w-4xl mx-auto">
                     {/* Main Experience */}
-                    <div className="lg:col-span-2">
-                        <motion.div
-                            variants={containerVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-100px" }}
-                            className="space-y-6"
-                        >
-                            {experiences.map((exp, index) => (
-                                <motion.div
-                                    key={index}
-                                    variants={itemVariants}
-                                    className="glass-card p-6 flex flex-col md:flex-row md:items-center md:justify-between group"
-                                >
-                                    <div>
-                                        <h3 className="text-xl font-bold text-slate-200 group-hover:text-cyan-400 transition-colors">
-                                            {exp.role}
-                                        </h3>
-                                        <p className="text-slate-400 font-medium text-lg">@ {exp.company}</p>
-                                    </div>
-                                    <div className="mt-4 md:mt-0">
-                                        <span className="text-slate-500 font-mono text-sm">{exp.duration}</span>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
-                    </div>
-
-                    {/* Leadership Roles */}
-                    <div>
-                        <motion.div
-                            initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.6 }}
-                            className="glass p-8 rounded-2xl sticky top-28"
-                        >
-                            <h3 className="text-2xl font-bold text-slate-200 mb-6 flex items-center border-b border-slate-700 pb-4">
-                                Leadership
-                            </h3>
-                            <ul className="space-y-8">
-                                {leadership.map((item, index) => (
-                                    <motion.li
-                                        key={index}
-                                        whileHover={{ x: 10 }}
-                                        className="flex justify-between items-center transition-transform"
-                                    >
-                                        <div>
-                                            <p className="text-lg font-bold text-cyan-400">{item.title}</p>
-                                            <p className="text-slate-300">@ {item.role}</p>
-                                        </div>
-                                    </motion.li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    </div>
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        className="space-y-6"
+                    >
+                        {experiences.map((exp, index) => (
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="glass-card p-6 flex flex-col md:flex-row md:items-center md:justify-between group"
+                            >
+                                <div>
+                                    <h3 className="text-xl font-bold text-slate-200 group-hover:text-cyan-400 transition-colors">
+                                        {exp.role}
+                                    </h3>
+                                    <p className="text-slate-400 font-medium text-lg">@ {exp.company}</p>
+                                </div>
+                                <div className="mt-4 md:mt-0">
+                                    <span className="text-slate-500 font-mono text-sm">{exp.duration}</span>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
             </div>
         </section>
