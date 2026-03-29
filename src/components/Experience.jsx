@@ -53,11 +53,11 @@ export default function Experience() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="flex items-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-100 flex items-center">
+                    <div className="mb-16 text-center">
+                        <h2 className="inline-block text-3xl md:text-4xl font-bold text-slate-100 relative">
                             Experience
+                            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-cyan-500 rounded-full" />
                         </h2>
-                        <div className="h-[1px] bg-slate-700 ml-6 flex-grow rounded" />
                     </div>
                 </motion.div>
 
