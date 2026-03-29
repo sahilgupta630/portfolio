@@ -18,19 +18,25 @@ export default function AboutEducation() {
                         <div className="h-[1px] bg-slate-700 ml-6 flex-grow rounded" />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-400">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center text-slate-400">
                         {/* About Text */}
-                        <div className="space-y-6 text-lg leading-relaxed">
+                        <div className="lg:col-span-7 space-y-6 text-lg leading-relaxed">
                             <p>
-                                I thrive in collaborative environments and enjoy working at the intersection of engineering, software, and AI. A competitive programmer at heart, I love solving complex problems and turning ideas into real-world impactful solutions.
+                                I am a Pre-Final year B.Tech (Hons.) student at IIT Kharagpur, majoring in Mechanical Engineering with a Minor in Computer Science and a Micro Specialization in AI & Applications.
                             </p>
                             <p>
-                                Always excited to connect with people passionate about technology, innovation, and building meaningful products.
+                                I enjoy building scalable software systems and Generative AI–driven applications, with hands-on experience in full-stack web development, machine learning, and LLM/RAG-based systems.
+                            </p>
+                            <p>
+                                A competitive programmer (Codeforces Candidate Master | CodeChef 4★), I love solving complex problems and turning ideas into real-world impactful solutions.
+                            </p>
+                            <p>
+                                I thrive in collaborative environments and enjoy working at the intersection of engineering, software, and AI. Always excited to connect with people passionate about technology, innovation, and building meaningful products.
                             </p>
                         </div>
 
                         {/* Education Bento Card */}
-                        <div className="glass-card p-6 md:p-8 relative overflow-hidden group">
+                        <div className="lg:col-span-5 glass-card p-6 md:p-8 relative overflow-hidden group h-fit">
                             <div className="absolute top-0 left-0 w-2 h-full bg-cyan-500 rounded-l" />
                             <h3 className="text-xl font-bold text-slate-200 mb-4 flex items-center">
                                 Education
