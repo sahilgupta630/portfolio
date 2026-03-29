@@ -35,6 +35,12 @@ export default function Projects() {
             tech: ["Python", "ML", "Computer Vision"],
             links: { github: "#", external: "#" },
         },
+        {
+            title: "moviemind",
+            description: "Movie recommendation system using the TMDB dataset — models, notebooks, evaluation & demo.",
+            tech: ["Jupyter Notebook"],
+            links: { github: "https://github.com/sahilgupta630/moviemind", external: "#" },
+        },
     ];
 
     const containerVariants = {
@@ -71,7 +77,7 @@ export default function Projects() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[1fr]"
                 >
                     {projects.map((project, index) => (
                         <motion.div
