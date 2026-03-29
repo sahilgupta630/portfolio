@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Code, Menu, X } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiCodeforces } from "react-icons/si";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +28,7 @@ export default function Navbar() {
     const socialLinks = [
         { name: "GitHub", href: "https://github.com/sahilgupta630", icon: <FaGithub size={20} /> },
         { name: "LinkedIn", href: "https://www.linkedin.com/in/sahil-gupta-904332293/", icon: <FaLinkedin size={20} /> },
-        { name: "Codeforces", href: "https://codeforces.com/profile/skg630", icon: <Code size={20} /> },
+        { name: "Codeforces", href: "https://codeforces.com/profile/skg630", icon: <SiCodeforces size={20} /> },
     ];
 
     return (

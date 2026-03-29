@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, Zap, Trophy, Shield, Star, Award as AwardIcon } from "lucide-react";
+import { SiCodeforces, SiCodechef } from "react-icons/si";
 
 export default function Achievements() {
     const achievements = [
-        { text: "Candidate Master at Codeforces (1900+)", icon: <Trophy size={24} className="text-cyan-400" /> },
-        { text: "4-Star Coder at CodeChef (1950+)", icon: <Star size={24} className="text-yellow-400" /> },
+        { text: "Candidate Master at Codeforces (1900+)", icon: <SiCodeforces size={24} className="text-cyan-400" /> },
+        { text: "4-Star Coder at CodeChef (1950+)", icon: <SiCodechef size={24} className="text-yellow-400" /> },
         { text: "1st Prize in Technology General Championship (TGC) Product Design 2025 (Seizure Prediction System)", icon: <Award className="text-orange-400" size={24} /> },
         { text: "2nd Position in Open IIT Product Management 2024-25 (FITPASS AI Fitness Platform)", icon: <Award className="text-blue-400" size={24} /> },
         { text: "3rd Prize in Technology General Championship (TGC) OpenSoft 2025", icon: <Award className="text-purple-400" size={24} /> },
