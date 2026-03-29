@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Code, Mail, Check } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiCodeforces } from "react-icons/si";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -59,7 +60,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Code size={24} />
+                        <SiCodeforces size={24} />
                     </a>
                 </div>
 
