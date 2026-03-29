@@ -26,6 +26,9 @@ export default function Experience() {
             role: "Web Development Intern",
             company: "SR INDIA",
             duration: "Jan 2026 - Feb 2026",
+            description: [
+                "Engineered and deployed responsive, mobile-first web applications, integrating dynamic API-driven features and optimizing frontend architecture to ensure high-performance user experiences across all device platforms.",
+            ],
         },
         {
             role: "Software Development Intern",
