@@ -1,5 +1,6 @@
 import React from "react";
-import { Github, Linkedin, Code, Mail } from "lucide-react";
+import { Code, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -34,7 +35,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Github size={24} />
+                        <FaGithub size={24} />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/sahil-gupta-904332293/"
@@ -42,7 +43,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Linkedin size={24} />
+                        <FaLinkedin size={24} />
                     </a>
                     <a
                         href="https://codeforces.com/profile/skg630"

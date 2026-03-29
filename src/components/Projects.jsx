@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Folder } from "lucide-react";
+import { ExternalLink, Folder } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
     const projects = [
@@ -89,7 +90,7 @@ export default function Projects() {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <Github size={20} />
+                                            <FaGithub size={20} />
                                         </a>
                                         <a
                                             href={project.links.external}
@@ -133,7 +134,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-slate-700 bg-slate-800/50 hover:bg-slate-700 hover:border-cyan-500 text-slate-200 hover:text-cyan-400 transition-all shadow-lg hover:shadow-cyan-500/20 font-mono text-lg group"
                     >
-                        <Github size={24} className="group-hover:scale-110 transition-transform" />
+                        <FaGithub size={24} className="group-hover:scale-110 transition-transform" />
                         github.com/sahilgupta630
                     </a>
                 </motion.div>
