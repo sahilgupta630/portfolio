@@ -34,6 +34,11 @@ export default function Experience() {
             role: "Software Development Intern",
             company: "Collegedunia",
             duration: "Sep 2025 - Dec 2025",
+            description: [
+                "Engineered and optimized user-facing components for the main education portal, improving UI responsiveness and ensuring seamless navigation for millions of monthly active users.",
+                "Designed and implemented robust RESTful APIs using Python to streamline data retrieval processes, effectively reducing server response time by approximately 15% through optimized query logic.",
+                "Authored comprehensive unit tests and performed rigorous debugging to ensure high-performance code, following Agile methodologies to deliver production-ready features.",
+            ],
         },
         {
             role: "Machine Learning Trainee",
