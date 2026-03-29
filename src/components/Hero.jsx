@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FileDown, ArrowDown } from "lucide-react";
+import { Mail, ArrowDown } from "lucide-react";
 
 export default function Hero() {
     const [text, setText] = useState("");
@@ -85,10 +85,10 @@ export default function Hero() {
                         View Projects <ArrowDown size={20} />
                     </a>
                     <a
-                        href="#"
+                        href="#contact"
                         className="px-10 py-4 rounded-xl border border-slate-700 bg-slate-900/50 hover:bg-slate-800 text-slate-100 font-bold text-lg transition-all flex items-center justify-center gap-2"
                     >
-                
+                        <Mail size={20} /> Contact Me
                     </a>
                 </motion.div>
             </div>
