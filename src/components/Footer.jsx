@@ -7,7 +7,7 @@ export default function Footer() {
     const [showEmail, setShowEmail] = useState(false);
 
     const handleEmailClick = () => {
-        navigator.clipboard.writeText("sahilgupta630@gmail.com");
+        navigator.clipboard.writeText("skg011105@gmail.com");
         setShowEmail(true);
         setTimeout(() => setShowEmail(false), 3000);
     };
@@ -32,7 +32,7 @@ export default function Footer() {
                         className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium text-lg transition-all shadow-[0_0_15px_rgba(6,182,212,0.5)] hover:shadow-[0_0_25px_rgba(6,182,212,0.8)]"
                     >
                         {showEmail ? <Check size={20} /> : <Mail size={20} />}
-                        {showEmail ? "sahilgupta630@gmail.com" : "Say Hello"}
+                        {showEmail ? "skg011105@gmail.com" : "Say Hello"}
                     </button>
                 </motion.div>
 
