@@ -5,7 +5,7 @@ export default function Experience() {
     const experiences = [
         {
             role: "AI Model Developer Intern",
-            company: "Sponsored Research & Industrial Consultancy (SRIC) Cell | IIT Kharagpur",
+            company: "Sponsored Research & Industrial Consultancy (SRIC) | IIT Kharagpur",
             duration: "Dec 2025 - Jan 2026",
             description: [
                 "Developed SRIC Dristikon, an analytics platform featuring 8 KPIs and interactive dashboards for project analysis",
@@ -18,6 +18,9 @@ export default function Experience() {
             role: "Research and Development Intern",
             company: "IIT Kharagpur",
             duration: "Dec 2025 - Mar 2026",
+            description: [
+                "Engineered and optimized high-fidelity Deep Learning models for real-time signal processing and predictive diagnostics, leveraging Python to architect end-to-end pipelines that transform high-dimensional sensor data into actionable insights within a rigorous R&D environment.",
+            ],
         },
         {
             role: "Web Development Intern",
