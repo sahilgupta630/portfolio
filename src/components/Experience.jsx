@@ -5,7 +5,7 @@ export default function Experience() {
     const experiences = [
         {
             role: "AI Model Developer Intern",
-            company: "SRIC",
+            company: "The Sponsored Research & Industrial Consultancy (SRIC)",
             duration: "Dec 2025 - Present",
         },
         {
