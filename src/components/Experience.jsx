@@ -44,6 +44,11 @@ export default function Experience() {
             role: "Machine Learning Trainee",
             company: "Amazon ML Summer School",
             duration: "Jul 2025 - Sep 2025",
+            description: [
+                "Completed an immersive ML training program mentored by Amazon Applied Scientists, focusing on industry-standard data science practices.",
+                "Applied theoretical knowledge to develop a multi-class classification model for e-commerce product categorization using Python, achieving an 85% validation accuracy.",
+                "Analyzed large datasets to uncover trends, demonstrating proficiency in data preprocessing, feature engineering, and model evaluation.",
+            ],
         },
     ];
 
