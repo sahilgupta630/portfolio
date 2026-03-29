@@ -60,7 +60,7 @@ export default function Experience() {
                 >
                     <div className="flex items-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-100 flex items-center">
-                            <span className="text-cyan-400 font-mono text-2xl mr-3">02.</span> Experience
+                            Experience
                         </h2>
                         <div className="h-[1px] bg-slate-700 ml-6 flex-grow rounded" />
                     </div>

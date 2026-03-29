@@ -25,7 +25,7 @@ export default function Achievements() {
                 >
                     <div className="flex items-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-100 flex items-center">
-                            <span className="text-cyan-400 font-mono text-2xl mr-3">04.</span> Achievements & Awards
+                            Achievements & Awards
                         </h2>
                         <div className="h-[1px] bg-slate-700 ml-6 flex-grow rounded" />
                     </div>
