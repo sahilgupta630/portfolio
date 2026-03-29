@@ -5,8 +5,14 @@ export default function Experience() {
     const experiences = [
         {
             role: "AI Model Developer Intern",
-            company: "The Sponsored Research & Industrial Consultancy (SRIC)",
-            duration: "Dec 2025 - Present",
+            company: "Sponsored Research & Industrial Consultancy (SRIC) Cell | IIT Kharagpur",
+            duration: "Dec 2025 - Jan 2026",
+            description: [
+                "Developed SRIC Dristikon, an analytics platform featuring 8 KPIs and interactive dashboards for project analysis",
+                "Architected ML-driven modules to automate faculty profiling and identify gaps in project management workflows",
+                "Built SRIC Compass, an RAG-based assistant utilizing semantic search and LLMs to parse complex GFR policy docs",
+                "Deployed a production-ready bot on official SRIC website, enabling real-time, high-precision policy query resolution",
+            ],
         },
         {
             role: "Research and Development Intern",
@@ -74,22 +80,34 @@ export default function Experience() {
                             <motion.div
                                 key={index}
                                 variants={itemVariants}
-                                className="glass-card p-6 flex flex-col md:flex-row md:items-center md:justify-between group"
+                                className="glass-card p-6 flex flex-col group"
                             >
-                                <div>
-                                    <h3 className="text-xl font-bold text-slate-200 group-hover:text-cyan-400 transition-colors">
-                                        {exp.role}
-                                    </h3>
-                                    <p className="text-slate-400 font-medium text-lg">@ {exp.company}</p>
+                                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <div>
+                                        <h3 className="text-xl font-bold text-slate-200 group-hover:text-cyan-400 transition-colors">
+                                            {exp.role}
+                                        </h3>
+                                        <p className="text-slate-400 font-medium text-lg">@ {exp.company}</p>
+                                    </div>
+                                    <div className="mt-2 md:mt-0">
+                                        <span className="text-slate-500 font-mono text-sm">{exp.duration}</span>
+                                    </div>
                                 </div>
-                                <div className="mt-4 md:mt-0">
-                                    <span className="text-slate-500 font-mono text-sm">{exp.duration}</span>
-                                </div>
+                                {exp.description && (
+                                    <ul className="list-disc list-inside space-y-2 text-slate-400 text-base">
+                                        {exp.description.map((point, i) => (
+                                            <li key={i} className="pl-2 -indent-5 ml-5">
+                                                <span className="text-slate-300">{point}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                             </motion.div>
                         ))}
                     </motion.div>
                 </div>
             </div>
         </section>
+
     );
 }
