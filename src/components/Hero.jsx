@@ -4,18 +4,41 @@ import { Mail, ArrowDown } from "lucide-react";
 
 export default function Hero() {
     const [text, setText] = useState("");
-    const fullText = "Mechanical Engineer @ IIT Kharagpur";
-    const [index, setIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    const roles = [
+        "Mechanical Engineer @ IIT Kharagpur",
+        "Competitive Programmer",
+        "Full Stack Developer",
+        "AI/ML Enthusiast"
+    ];
 
     useEffect(() => {
-        if (index < fullText.length) {
-            const timeout = setTimeout(() => {
-                setText(prev => prev + fullText[index]);
-                setIndex(prev => prev + 1);
-            }, 100);
-            return () => clearTimeout(timeout);
-        }
-    }, [index]);
+        const handleType = () => {
+            const i = loopNum % roles.length;
+            const fullRole = roles[i];
+
+            setText(
+                isDeleting
+                    ? fullRole.substring(0, text.length - 1)
+                    : fullRole.substring(0, text.length + 1)
+            );
+
+            setTypingSpeed(isDeleting ? 80 : 150);
+
+            if (!isDeleting && text === fullRole) {
+                setTimeout(() => setIsDeleting(true), 2000);
+            } else if (isDeleting && text === "") {
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+            }
+        };
+
+        const timer = setTimeout(handleType, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [text, isDeleting, loopNum, typingSpeed]);
 
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-slate-950" id="home">
