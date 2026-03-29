@@ -1,9 +1,17 @@
-import React from "react";
-import { Code, Mail } from "lucide-react";
+import React, { useState } from "react";
+import { Code, Mail, Check } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Footer() {
+    const [showEmail, setShowEmail] = useState(false);
+
+    const handleEmailClick = () => {
+        navigator.clipboard.writeText("sahilgupta630@gmail.com");
+        setShowEmail(true);
+        setTimeout(() => setShowEmail(false), 3000);
+    };
+
     return (
         <footer id="contact" className="py-16 bg-slate-950 text-center border-t border-slate-800">
             <div className="max-w-4xl mx-auto px-6">
@@ -19,13 +27,13 @@ export default function Footer() {
                         Whether you have a question, a project idea, or just want to say hi,
                         I'll try my best to get back to you!
                     </p>
-                    <a
-                        href="mailto:sahilgupta630@gmail.com"
+                    <button
+                        onClick={handleEmailClick}
                         className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium text-lg transition-all shadow-[0_0_15px_rgba(6,182,212,0.5)] hover:shadow-[0_0_25px_rgba(6,182,212,0.8)]"
                     >
-                        <Mail size={20} />
-                        Say Hello
-                    </a>
+                        {showEmail ? <Check size={20} /> : <Mail size={20} />}
+                        {showEmail ? "sahilgupta630@gmail.com" : "Say Hello"}
+                    </button>
                 </motion.div>
 
                 <div className="flex justify-center flex-wrap gap-6 mb-10">
