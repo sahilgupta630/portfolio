@@ -1,28 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Terminal, Cpu, Database, Layout, Settings, Code2, Globe, Box } from "lucide-react";
+import { Terminal, Cpu, Database, Layout, Settings, Server, ShieldCheck, Layers } from "lucide-react";
 
 export default function Skills() {
     const skillCategories = [
         {
-            title: "Programming & Web",
-            icon: <Globe className="text-cyan-400" size={24} />,
-            skills: ["C", "C++", "Python", "JavaScript", "SQL", "HTML", "CSS"],
+            title: "Languages & Core CS",
+            icon: <Terminal className="text-cyan-400" size={24} />,
+            skills: ["C++", "Python", "JavaScript", "TypeScript", "C", "SQL", "DSA", "OOP", "System Design", "Distributed Systems", "Microservices"],
         },
         {
-            title: "Frameworks & Libraries",
-            icon: <Box className="text-blue-400" size={24} />,
-            skills: ["C++ STL", "React.js", "Node.js", "Express.js", "FastAPI", "Bootstrap", "LangChain", "Streamlit"],
+            title: "Frontend Development",
+            icon: <Layout className="text-blue-400" size={24} />,
+            skills: ["HTML5", "CSS3", "React.js", "Next.js", "Redux Toolkit", "Tailwind CSS", "Material UI", "Framer Motion", "Bootstrap", "Rough.js"],
+        },
+        {
+            title: "Backend & Cloud",
+            icon: <Server className="text-purple-400" size={24} />,
+            skills: ["Node.js", "Express.js", "FastAPI", "REST APIs", "WebSockets", "Socket.IO", "Kafka", "Redis", "Firebase Functions", "AWS", "GCP", "Azure"],
+        },
+        {
+            title: "AI & Data Expertise",
+            icon: <Cpu className="text-emerald-400" size={24} />,
+            skills: ["Generative AI", "RAG", "LangChain", "LLMs", "TensorFlow.js", "Streamlit", "PostgreSQL", "MongoDB", "MySQL", "PostGIS", "Firebase"],
+        },
+        {
+            title: "DevOps & Testing",
+            icon: <ShieldCheck className="text-orange-400" size={24} />,
+            skills: ["Docker", "Docker Compose", "Kubernetes", "GitHub Actions", "CI/CD Pipelines", "Jest", "Performance Tuning", "Scalability", "Optimization"],
         },
         {
             title: "Tools & Platforms",
-            icon: <Settings className="text-purple-400" size={24} />,
-            skills: ["Git", "GitHub", "GitHub Actions", "Docker Compose", "VS Code", "Arduino IDE", "Postman", "Figma"],
-        },
-        {
-            title: "Core CS & Expertise",
-            icon: <Database className="text-emerald-400" size={24} />,
-            skills: ["DSA", "Object-Oriented Programming", "Web App Development", "DBMS", "Generative AI", "RAG"],
+            icon: <Layers className="text-pink-400" size={24} />,
+            skills: ["Git", "GitHub", "VS Code", "Postman", "Vercel", "Netlify", "MongoDB Compass", "Figma", "Arduino IDE", "WebRTC", "Real-time Collaboration"],
         },
     ];
 
@@ -60,25 +70,25 @@ export default function Skills() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                     >
                         {skillCategories.map((category, index) => (
                             <motion.div
                                 key={index}
                                 variants={itemVariants}
-                                className="glass-card p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/30 transition-all group"
+                                className="glass-card p-8 rounded-2xl border border-slate-800 hover:border-cyan-500/30 transition-all group flex flex-col h-full"
                             >
-                                <div className="flex items-center gap-4 mb-6">
+                                <div className="flex items-center gap-4 mb-8">
                                     <div className="p-3 bg-slate-800/50 rounded-lg group-hover:scale-110 transition-transform">
                                         {category.icon}
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-100">{category.title}</h3>
+                                    <h3 className="text-xl font-bold text-slate-100 leading-tight">{category.title}</h3>
                                 </div>
-                                <div className="flex flex-wrap gap-2 text-slate-200">
+                                <div className="flex flex-wrap gap-x-2 gap-y-3 text-slate-200">
                                     {category.skills.map((skill, i) => (
                                         <span
                                             key={i}
-                                            className="px-4 py-2 bg-slate-800/40 rounded-lg border border-slate-700/50 text-sm font-medium hover:bg-cyan-500/10 hover:border-cyan-500/50 transition-all cursor-default"
+                                            className="px-3 py-1.5 bg-slate-800/40 rounded-lg border border-slate-700/50 text-sm font-medium hover:bg-cyan-500/10 hover:border-cyan-500/50 transition-all cursor-default"
                                         >
                                             {skill}
                                         </span>
@@ -92,3 +102,4 @@ export default function Skills() {
         </section>
     );
 }
+
