@@ -6,7 +6,7 @@ export default function Experience() {
         {
             role: "AI Model Developer Intern",
             company: "Sponsored Research & Industrial Consultancy (SRIC) | IIT Kharagpur",
-            duration: "Dec 2025 - Jan 2026",
+            duration: "Dec 2025 - Present",
             description: [
                 "Developed SRIC Dristikon, an analytics platform featuring 8 KPIs and interactive dashboards for project analysis",
                 "Architected ML-driven modules to automate faculty profiling and identify gaps in project management workflows",

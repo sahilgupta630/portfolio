@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, ArrowDown } from "lucide-react";
+import TechShape3D from "./TechShape3D";
 
 export default function Hero() {
     const [text, setText] = useState("");
@@ -9,7 +10,7 @@ export default function Hero() {
     const [typingSpeed, setTypingSpeed] = useState(150);
 
     const roles = [
-        "Mechanical Engineer @ IIT Kharagpur",
+        "Mechanical Engineering Student @ IIT Kharagpur",
         "Competitive Programmer",
         "Full Stack Developer",
         "AI/ML Enthusiast"
@@ -46,7 +47,12 @@ export default function Hero() {
             <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full z-10 flex flex-col items-center text-center">
+            {/* 3D Shape - positioned on the right side for desktop */}
+            <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] hidden lg:block z-0">
+                <TechShape3D variant="icosahedron" />
+            </div>
+
+            <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
                 {/* Greeting */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -99,7 +105,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
+                    className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto lg:justify-start"
                 >
                     <a
                         href="#projects"
