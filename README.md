@@ -2,7 +2,7 @@
 
 Welcome to my portfolio!
 
-This is where I try to convince you that I know what I am doing.
+This is where I try to convince you that I know what I am doing :)
 
 Spoiler: Sometimes I do.
 
